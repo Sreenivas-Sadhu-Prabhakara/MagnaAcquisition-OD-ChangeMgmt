@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magna Acquisition | OD & Change Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f1f5f9',
+                            accent: '#3b82f6',
+                            gold: '#fbbf24'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/80 border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-wider">MAGNA<span class="text-brand-accent">.</span></span>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+                <a href="#vision" class="hover:text-brand-accent transition-colors">Vision</a>
+                <a href="#kotter" class="hover:text-brand-accent transition-colors">Kotter's Model</a>
+                <a href="#adkar" class="hover:text-brand-accent transition-colors">ADKAR</a>
+                <a href="#strategy" class="hover:text-brand-accent transition-colors">Strategy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-slate-800 to-brand-dark opacity-80 z-0"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <p class="gsap-hero text-brand-accent font-semibold tracking-widest uppercase mb-4">Organizational Development & Change Management</p>
+            <h1 class="gsap-hero text-5xl md:text-7xl font-serif mb-6 leading-tight">The Magna <br>Acquisition</h1>
+            <p class="gsap-hero text-lg md:text-2xl text-slate-300 font-light max-w-2xl mx-auto mb-10">
+                Transforming organizational culture and structure through human-centric change frameworks.
+            </p>
+            <a href="#vision" class="gsap-hero inline-block px-8 py-4 bg-brand-accent hover:bg-blue-600 transition-colors rounded-full font-semibold text-white tracking-widest uppercase text-sm">
+                Explore the Journey
+            </a>
+        </div>
+    </section>
+
+    <!-- Vision & Challenge -->
+    <section id="vision" class="py-24 bg-brand-light text-brand-dark relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="gsap-fade-up">
+                    <h2 class="text-4xl font-serif mb-6">Navigating the Integration</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        The anticipated acquisition of Magna represents a pivotal moment in our strategic growth. However, mergers fail not on financial metrics, but on human integration. Our focus is to bridge cultures, align structures, and foster a cohesive organizational identity.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        By leveraging established Organizational Development (OD) methodologies, we aim to minimize disruption, maximize synergy, and capture the "Heart of Change."
+                    </p>
+                </div>
+                <div class="gsap-fade-left relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2938&auto=format&fit=crop" alt="Team meeting" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kotter's Framework -->
+    <section id="kotter" class="py-24 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 gsap-fade-up">
+                <span class="text-brand-accent tracking-widest uppercase text-sm font-semibold">The Core Philosophy</span>
+                <h2 class="text-4xl md:text-5xl font-serif mt-2 mb-6 text-white">Kotter's 8-Step Process</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Focusing on the "Heart of Change" by appealing to how people feel, fundamentally altering behavior to drive the Magna integration forward.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Step 1-4 -->
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-2">Create Urgency</h3>
+                    <p class="text-sm text-slate-400">Communicate the compelling need for the acquisition to spark motivation across Magna and the parent company.</p>
+                </div>
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-2">Build Guiding Coalition</h3>
+                    <p class="text-sm text-slate-400">Assemble a diverse, cross-functional transition team with the power and influence to lead the integration.</p>
+                </div>
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-2">Form Strategic Vision</h3>
+                    <p class="text-sm text-slate-400">Develop a clear, emotional, and logical vision for the unified future company.</p>
+                </div>
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">04</div>
+                    <h3 class="text-xl font-bold mb-2">Enlist a Volunteer Army</h3>
+                    <p class="text-sm text-slate-400">Communicate the vision continuously to foster buy-in and inspire action among all employees.</p>
+                </div>
+                
+                <!-- Step 5-8 -->
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">05</div>
+                    <h3 class="text-xl font-bold mb-2">Enable Action</h3>
+                    <p class="text-sm text-slate-400">Remove organizational structure blocks, processes, and legacy systems that hinder the integration.</p>
+                </div>
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">06</div>
+                    <h3 class="text-xl font-bold mb-2">Generate Short-Term Wins</h3>
+                    <p class="text-sm text-slate-400">Identify and execute easily achievable integration milestones to build momentum and morale.</p>
+                </div>
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">07</div>
+                    <h3 class="text-xl font-bold mb-2">Sustain Acceleration</h3>
+                    <p class="text-sm text-slate-400">Press harder after the first successes. Analyze what went right and keep driving change deeper.</p>
+                </div>
+                <div class="kotter-card bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition-colors">
+                    <div class="text-3xl font-serif text-brand-accent mb-4">08</div>
+                    <h3 class="text-xl font-bold mb-2">Institute Change</h3>
+                    <p class="text-sm text-slate-400">Anchor the new approaches in the corporate culture to ensure long-term success of the Magna acquisition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADKAR Section -->
+    <section id="adkar" class="py-24 bg-slate-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="adkar-item bg-brand-dark p-6 rounded-xl border border-white/5">
+                        <h4 class="text-brand-accent font-bold mb-2">Awareness</h4>
+                        <p class="text-xs text-slate-400">Of the need for the acquisition.</p>
+                    </div>
+                    <div class="adkar-item bg-brand-dark p-6 rounded-xl border border-white/5 mt-0 md:mt-8">
+                        <h4 class="text-brand-accent font-bold mb-2">Desire</h4>
+                        <p class="text-xs text-slate-400">To participate and support the change.</p>
+                    </div>
+                    <div class="adkar-item bg-brand-dark p-6 rounded-xl border border-white/5">
+                        <h4 class="text-brand-accent font-bold mb-2">Knowledge</h4>
+                        <p class="text-xs text-slate-400">On how to adapt to new systems.</p>
+                    </div>
+                    <div class="adkar-item bg-brand-dark p-6 rounded-xl border border-white/5 mt-0 md:mt-8">
+                        <h4 class="text-brand-accent font-bold mb-2">Ability</h4>
+                        <p class="text-xs text-slate-400">To implement and perform new skills.</p>
+                    </div>
+                    <div class="adkar-item bg-brand-dark p-6 rounded-xl border border-white/5 md:col-span-2">
+                        <h4 class="text-brand-accent font-bold mb-2">Reinforcement</h4>
+                        <p class="text-xs text-slate-400">To sustain the change post-acquisition.</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 gsap-fade-left">
+                    <span class="text-brand-accent tracking-widest uppercase text-sm font-semibold">Individual Transition</span>
+                    <h2 class="text-4xl font-serif mt-2 mb-6">The Prosci ADKAR® Model</h2>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        While Kotter guides the organizational momentum, ADKAR ensures no individual is left behind during the Magna integration. Organizational change only happens when individuals change.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        By mapping our communication, training, and resistance management plans to the ADKAR milestones, we create a supportive environment that mitigates anxiety and accelerates proficiency among the joined workforce.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center md:flex md:justify-between md:items-center">
+            <span class="text-xl font-bold tracking-wider text-white">MAGNA<span class="text-brand-accent">.</span></span>
+            <p class="text-slate-500 text-sm mt-4 md:mt-0">&copy; 2026 Organizational Development & Change Management Plan. Confidential.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
