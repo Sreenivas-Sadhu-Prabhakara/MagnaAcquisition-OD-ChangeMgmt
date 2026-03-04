@@ -1,0 +1,223 @@
+/* ============================================================
+   MAGNA x QUESS — OD & Change Management
+   Custom Stylesheet
+   ============================================================ */
+
+/* ---------- Base Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #020617;
+    color: #f1f5f9;
+    overflow-x: hidden;
+}
+
+/* ---------- Custom Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+/* ---------- Typography Helpers ---------- */
+.sec-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.sec-sub {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 640px;
+}
+
+/* ---------- Hero ---------- */
+.hero-glow {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(59,130,246,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(139,92,246,0.10) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.toc-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.9rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.toc-pill:hover {
+    background: rgba(59,130,246,0.15);
+    border-color: rgba(59,130,246,0.4);
+    color: #60a5fa;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: #475569;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ---------- Cards & Reveals ---------- */
+.reveal-card {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for sibling cards */
+.reveal-card:nth-child(2) { transition-delay: 0.1s; }
+.reveal-card:nth-child(3) { transition-delay: 0.2s; }
+.reveal-card:nth-child(4) { transition-delay: 0.3s; }
+.reveal-card:nth-child(5) { transition-delay: 0.4s; }
+.reveal-card:nth-child(6) { transition-delay: 0.5s; }
+
+/* ---------- Kotter & ADKAR Hover Effects ---------- */
+.kotter-card, .adkar-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+}
+.kotter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px -8px rgba(59,130,246,0.22);
+}
+.adkar-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px -8px rgba(139,92,246,0.22);
+}
+
+/* ---------- Stakeholder Table Badges ---------- */
+.badge-b, .badge-v, .badge-g, .badge-a, .badge-r {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin: 0.15rem 0.1rem;
+}
+.badge-b { background: #dbeafe; color: #1d4ed8; }
+.badge-v { background: #ede9fe; color: #7c3aed; }
+.badge-g { background: #d1fae5; color: #065f46; }
+.badge-a { background: #fef3c7; color: #92400e; }
+.badge-r { background: #fee2e2; color: #991b1b; }
+
+/* ---------- Nav Active Indicator ---------- */
+.nav-link.active {
+    color: #60a5fa !important;
+    background: rgba(59,130,246,0.10);
+}
+
+/* ---------- Counter Digits ---------- */
+.counter {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+}
+
+/* ---------- Back to Top Button ---------- */
+#back-to-top {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* ---------- Mobile Menu ---------- */
+#mobile-menu {
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+#mobile-menu.open {
+    max-height: 600px;
+    opacity: 1;
+}
+
+/* ---------- Section background patterns ---------- */
+.bg-dots {
+    background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+.bg-grid {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ---------- Animated gradient border glow ---------- */
+@keyframes borderGlow {
+    0%, 100% { border-color: rgba(59,130,246,0.3); }
+    50%       { border-color: rgba(139,92,246,0.55); }
+}
+.glow-border { animation: borderGlow 4s ease-in-out infinite; }
+
+/* ---------- Pulse dot ---------- */
+@keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%       { transform: scale(1.5); opacity: 0.6; }
+}
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+/* ---------- Print Styles ---------- */
+@media print {
+    nav, #back-to-top, .scroll-hint { display: none !important; }
+    .reveal-card { opacity: 1 !important; transform: none !important; }
+    body { background: white !important; color: #111 !important; }
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 768px) {
+    .sec-title { font-size: 1.85rem; }
+    .sec-sub   { font-size: 0.95rem; }
+    .adkar-item { padding: 1.25rem; }
+}
